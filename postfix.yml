@@ -1,5 +1,5 @@
 ---
-- name: Restart postfix service `hostname`
+- name: Restart postfix on {{ inventory_hostname }}
   hosts: all
   become: yes
 
