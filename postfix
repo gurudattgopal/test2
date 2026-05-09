@@ -1,0 +1,17 @@
+---
+- name: Restart postfix service
+  hosts: linux_servers
+  become: yes
+
+  tasks:
+    - name: Restart postfix
+      ansible.builtin.service:
+        name: postfix
+        state: restarted
+
+    - name: Verify postfix status
+      ansible.builtin.service_facts:
+
+    - name: Show postfix status
+      ansible.builtin.debug:
+        msg: "Postfix service restarted successfully"
