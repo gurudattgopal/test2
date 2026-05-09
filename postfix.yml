@@ -1,6 +1,6 @@
 ---
 - name: Restart postfix service
-  hosts: linux_servers
+  hosts: all
   become: yes
 
   tasks:
