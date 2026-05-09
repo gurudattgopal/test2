@@ -1,5 +1,5 @@
 ---
-- name: Restart postfix service
+- name: Restart postfix service `hostname`
   hosts: all
   become: yes
 
